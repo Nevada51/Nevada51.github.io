@@ -1,0 +1,29 @@
+@media (max-width: 1199px) {
+	html {
+		font-size: 8px;
+	}
+}
+@media (max-width: 991px) {
+	html {
+		font-size: 7px;
+	}
+	.visible-lg {
+		display: none;
+	}
+	.m-menu-link {
+		display: block;
+	}
+	.price-tags {
+		flex-direction: column;
+	}
+	.price-tag {
+		width: 80%;
+		margin: 2rem auto;
+	}
+	.footer-menu {
+		display: none;
+	}
+	.footer-content {
+		justify-content: center;
+	}
+}
