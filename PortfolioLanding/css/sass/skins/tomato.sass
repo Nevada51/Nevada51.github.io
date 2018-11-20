@@ -1,0 +1,127 @@
+@import "../bourbon/bourbon"
+
+$color: #FF6347 //Theme skin
+$text_color: #888
+$main_color: #222
+$bg_light: #F6F2F2
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+body
+	color: $main_color
+	+kerning(1)
+
+a
+	color: $color
+
+p,
+body .main_footer,
+.s_about li
+	color: $text_color
+
+.color_element
+	color: $color
+.color_bg
+	background-color: $color
+.color_border
+	border-color: $color
+
+.bg_light
+	background-color:  $bg_light
+.bg_dark
+	background-color:  $main_color
+	color: #fff
+	.s_description::after
+		background-color: #fff
+	a
+		color: #fff
+
+svg
+	path
+		fill: $text_color
+
+.top_mnu
+	a:hover
+		color: $color
+		background-color: rgba(255,255,255,.05)
+	a
+		+kerning(4)
+
+.top_text
+	p
+		color: $bg_light
+		+kerning(5)
+
+.s_description
+	+kerning(5)
+	&::after
+		background-color: $main_color
+
+.main_footer
+	+kerning(0)
+
+section
+	h3
+		+kerning(3)
+		color: $text_color
+
+.s_about
+	p:nth-child(even)
+		color: $color
+
+.personal_header
+	+kerning(3)
+
+.resume_container
+	h3
+		color:  $main_color
+		+kerning(2)
+		font-size: 16px
+		font-weight: 600
+	.left .resume-description strong
+		margin-left: 10px
+	.right .resume-description strong
+		margin-right: 10px
+
+.resume-item
+	.year
+		background-color: $color
+
+.s_portfolio
+	li
+		+kerning(2)
+		color: $text_color
+		&.active
+			color: #fff
+			border-bottom: 1px solid $color
+
+.portfolio_item
+	.port_item_cont
+		a
+			border-color: $color
+			color: $color
+
+.main_footer
+	a
+		color: $color
+
+.contact_icon
+	color: $color
+
+.text-danger
+	color: $color
+
+form
+	input:focus,
+	textarea:focus
+		border: 1px solid $color
+	input,
+	textarea
+		+kerning(2)
+	button
+		background-color: $color
+		+kerning(2)
+	.form-group
+		+kerning(2)
+		color: $text_color
