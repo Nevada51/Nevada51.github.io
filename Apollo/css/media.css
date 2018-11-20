@@ -1,0 +1,80 @@
+@media (max-width: 1180px) {
+  .wrapper {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  .header .text-content, .about .text-content, .features .text-content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    text-align: right;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+    .header .text-content::after, .about .text-content::after, .features .text-content::after {
+      display: none; }
+    .header .text-content h2::before, .about .text-content h2::before, .features .text-content h2::before {
+      display: none; }
+  .header .img-wrapper, .about .img-wrapper, .features .img-wrapper {
+    display: none; }
+  .full-slider .slider-btn {
+    font-size: 22px;
+    line-height: 22px;
+    padding: 8px 10px; }
+  .triple-slider i {
+    height: 45px;
+    width: 45px;
+    font-size: 24px;
+    line-height: 45px; } }
+
+@media (max-width: 900px) {
+  .triple-slider li {
+    width: 50%; }
+  .triple-slider .current {
+    width: 60%; }
+  .contacts .wrapper form {
+    min-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .contacts .wrapper form input, .contacts .wrapper form textarea {
+      width: 95%;
+      margin: 0 0 1rem;
+      padding: 0 8px; } }
+
+@media (max-width: 600px) {
+  .section_svg {
+    display: none; }
+  .full-slider button[class="slider-btn pause"], .full-slider button[class="slider-btn play"] {
+    display: none; }
+  .wrapper .text-content {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .wrapper .text-content h1, .wrapper .text-content h2 {
+      font-size: 2rem; }
+  .triple-slider li {
+    display: none; }
+  .triple-slider .current {
+    display: block;
+    width: 100%; }
+  .triple-slider {
+    height: 350px; }
+    .triple-slider-main___block {
+      width: 100%; } }
