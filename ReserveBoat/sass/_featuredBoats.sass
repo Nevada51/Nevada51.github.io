@@ -1,0 +1,121 @@
+.features
+
+	overflow-x: hidden
+
+	position: relative
+	&-title
+		margin: 100px auto 90px
+		@extend %containerSectionTitle
+	.light-button
+		@extend %lightButton
+	.boats
+		.boat
+			position: relative
+			min-height: 330px
+			min-width: 330px
+			margin-bottom: 30px
+			border-radius: 10px
+			background-position: center center !important
+			background-repeat: no-repeat  !important
+			-webkit-background-size: cover  !important
+			-moz-background-size: cover  !important
+			background-size: cover  !important
+			transition: all 300ms ease
+			&:hover
+				.boat-price
+					transform: scale(1.1)
+					transition: all 300ms ease
+				.boat-location
+					span
+						&:before 
+							width: 100%
+							top: 100%
+							left: 0
+							background: $accent
+					i
+						color: $accent
+						transition: all 300ms ease
+
+			@media (max-width: 576px)
+				min-height: 260px
+				min-width: 260px
+
+			&-price
+				position: absolute
+				top: 30px
+				left: 27px
+				background-color: #e7434e
+				border-radius: 10px
+				padding: 15px 12px 15px 13px
+				@media (max-width: 576px)
+					top: 15px
+					left: 13px
+			&-gradient
+				position: absolute
+				width: 100%
+				height: 80%
+				bottom: 0
+				left: 0	
+				border-radius: 10px
+				background: linear-gradient(to top, black 25%, transparent 75%);
+				opacity: .6
+			&-location	
+				position: absolute
+				bottom: 27px
+				left: 30px
+				a
+					text-decoration: none
+					color: $white
+				span
+					position: relative
+					display: inline
+					font-size: 30px
+					line-height: 1.7
+					letter-spacing: 1.2px
+					white-space: nowrap
+					&:before 
+						content: ""
+						width: 0
+						height: 0.1em
+						position: absolute
+						top: 100%
+						bottom: 0
+						right: 0
+						background: $white
+						transition: all 0.3s
+				p
+					display: inline-block
+					line-height: 1.38
+					letter-spacing: 0.3px
+					margin-bottom: 0
+					padding-right: 30px
+				i
+					margin-right: 10px
+				@media (max-width: 576px)
+					bottom: 15px
+					left: 13px
+					span
+						display: block
+						font-size: 28px
+
+					
+
+
+		.bla
+			&:nth-child(1)
+				.boat
+					background: url("../img/featured-boat1.jpg")
+			&:nth-child(2)
+				.boat
+					background: url("../img/featured-boat2.jpg")
+			&:nth-child(3)
+				.boat
+					background: url("../img/featured-boat3.jpg")
+			&:nth-child(4)
+				.boat
+					background: url("../img/featured-boat4.jpg")
+
+@media (max-width: 1170px)
+	.features
+		&-title
+			margin: 75px auto 70px

@@ -1,0 +1,167 @@
+footer
+	overflow: hidden
+	background-color: #404040
+	.wrapper
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		padding: 40px 0
+		h4
+			font-size: 16px
+			font-weight: bold
+			line-height: 1.57
+			letter-spacing: 0.6px
+			margin-bottom: 30px
+			text-transform: uppercase
+			text-align: left
+		ul
+			list-style-type: none
+			padding: 0
+			font-size: 14px
+			letter-spacing: .56px
+			a:hover
+				text-decoration: none
+				color: $accent
+			li
+				padding-bottom: 13px
+		.footer-newsletter
+			width: 470px
+			h4
+				text-align: center
+			@extend %searchForm
+			input
+				line-height: 1.56
+				letter-spacing: 0.3px
+				padding: 14px 22px 14px
+				min-height: 42px
+				width: 71%
+			button
+				padding: 14px 7px 14px
+				min-height: 42px
+				width: 27%
+			.social-container
+				text-align: center
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				margin: auto
+				max-height: 80px
+			ul.submenu
+				background-color: #212121
+				border-radius: 5px
+				display: inline-block
+				padding: 0
+				margin: 35px 0 0
+				overflow: hidden
+				li
+					display: inline-block
+					padding-bottom: 0
+					a
+						position: relative
+						top: -5px
+						i.fab
+							padding: 1px
+							display: inline-block
+							border: 1px solid transparent
+							color: #ccc
+							height: 30px
+							width: 30px
+							border-radius: 50px
+							margin: 10px
+							text-align: center
+							line-height: 30px
+							position: relative
+							top: 2px
+							z-index: 2
+							&::after
+								content: ""
+								height: 0%
+								width: 0%
+								position: absolute
+								top: -500%
+								bottom: -500%
+								left: -500%
+								right: -500%
+								margin: auto
+								border: 0px solid transparent
+								border-radius: 200px
+								opacity: 0
+								z-index: -1
+								transition: all ease 0.5s
+					&:hover
+						i.fab::before
+							color: #fff
+						i.fa-facebook-f::after
+							height: 200%
+							width: 200%
+							background-color: rgb(59,89,152)
+							border-radius: 0px
+							opacity: 1
+						i.fa-twitter::after
+							height: 200%
+							width: 200%
+							background-color: rgb(29,202,255)
+							border-radius: 0px
+							opacity: 1
+						i.fa-google-plus-g::after
+							height: 200%
+							width: 200%
+							background-color: rgb(211,72,54)
+							border-radius: 0px
+							opacity: 1
+						i.fa-instagram::after
+							height: 200%
+							width: 200%
+							background-color: rgb(138,58,185)
+							border-radius: 0px
+							opacity: 1
+
+
+@media (max-width: 1170px)
+	footer
+		.wrapper
+			flex-wrap: wrap
+			.footer-listLoc
+				order: 0
+			.footer-listBoat
+				order: 1
+			.footer-newsletter
+				order: 3
+				flex-grow: 1
+				text-align: center
+				h4
+					margin: 15px auto 30px
+					text-align: center
+					
+				
+			.footer-listCont
+				order: 2
+@media (max-width: 576px)	
+	footer
+		.wrapper
+			flex-direction: column
+			align-items: center	
+			flex-wrap: wrap
+			align-content: space-around
+			h4
+				margin-bottom: 15px
+				text-align: center
+			ul
+				text-align: center
+				
+			.footer-newsletter
+				width: 95%
+				input
+					font-size: 12px
+					line-height: 1.56
+					letter-spacing: 0.1px
+					padding: 14px 7px 14px
+					width: 71%
+				button
+					font-size: 12px
+					line-height: 19px
+					letter-spacing: 0.1px
+					padding: 14px 2px 14px
+					width: 27%
+					

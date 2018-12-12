@@ -1,0 +1,40 @@
+.ownBoat
+	// display: none
+	overflow: hidden
+	
+	background-image: url("../img/bg-ownBoat.jpg")
+	background-position: center right
+	background-size: cover
+	background-repeat: no-repeat
+	height: 70vh
+	display: flex
+	justify-content: center
+	align-items: center
+	&-title
+		@extend %fullSectionTitle
+		.red-btn
+			background-color: #e7434e
+			border: none
+			border-radius: 5px
+			border: 3px solid $accent
+			padding: 25px 45px
+			text-transform: uppercase
+			font-family: "Raleway", sans-serif
+			font-size: 14px
+			font-weight: bold
+			line-height: 1.57
+			letter-spacing: 0.6px
+			color: #fff
+			transition: all 300ms ease
+			max-height: 77px
+			&:hover
+				font-size: 20px
+				line-height: 1.57
+				letter-spacing: 3.6px
+				padding: 21px 45px
+				cursor: pointer
+				border: 3px solid $accent
+				background-color: transparent
+				color: $white
+			@media (max-width: 576px)
+				padding: 18px 25px
