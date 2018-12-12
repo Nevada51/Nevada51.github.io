@@ -39,44 +39,17 @@ function startSlider() {
 }
 
 	
-setInterval(startSlider, 5000);
+setInterval(startSlider, 7000);
 
 
-
-	$('.section-title').animated("fadeIn", "fadeOut");
-	$('.member:nth-child(1)').animated("bounceInLeft", "bounceOutLeft");
-	$('.member:nth-child(2)').animated("bounceIn", "bounceOut");
-	$('.member:nth-child(3)').animated("bounceInRight", "bounceOutRight");
-	$('.contacts-text').animated("bounceInLeft", "bounceOuLeft");
-	$('input[type="text"]').animated("bounceInRight", "bounceOutRight");
-	$('input[type="mail"]').animated("bounceInRight", "bounceOutRight");
-	$('textarea[name="text"]').animated("bounceInRight", "bounceOutRight");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$('.section-title').animated("fadeIn", "fadeOut");
+$('.member:nth-child(1)').animated("bounceInLeft", "bounceOutLeft");
+$('.member:nth-child(2)').animated("bounceIn", "bounceOut");
+$('.member:nth-child(3)').animated("bounceInRight", "bounceOutRight");
+$('.contacts-text').animated("bounceInLeft", "bounceOuLeft");
+$('input[type="text"]').animated("bounceInRight", "bounceOutRight");
+$('input[type="mail"]').animated("bounceInRight", "bounceOutRight");
+$('textarea[name="text"]').animated("bounceInRight", "bounceOutRight");
 
 
 });
