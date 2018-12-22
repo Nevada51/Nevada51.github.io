@@ -255,6 +255,9 @@ a:hover, a:active {
       text-decoration: none; }
       .careers-list__item a:visited {
         color: #6F7583; }
+    .careers-list__item:hover a {
+      font-weight: 500;
+      color: #111; }
   .careers-list__active {
     font-weight: 500;
     color: #111; }
@@ -281,6 +284,9 @@ a:hover, a:active {
       margin-right: 16px; }
     .career-description > a:visited {
       color: #292F42; }
+    .career-description > a:hover {
+      font-weight: 500;
+      color: #111; }
   .career-description .career-description__title {
     position: relative;
     margin-bottom: 30px; }
