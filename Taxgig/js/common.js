@@ -14,8 +14,8 @@ window.onload = function () {
 		button_open.classList.add('show-btn');
 	});
 
-	$(window).resize(function() {
-		if ( $(window).width() < 768 ) {
+	window.addEventListener("resize", function(){
+		if(window.innerWidth < 768){
 			button_open.classList.remove('show-btn');
 		}
 	});
