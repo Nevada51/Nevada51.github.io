@@ -1,0 +1,203 @@
+body {
+	background-color: $bg-light;
+	font-size: 16px;
+	font-family: 'Lora', serif;
+	font-family: 'Work Sans', sans-serif;
+	letter-spacing: 0.3px;
+	color: $text-dark;
+}
+
+body, p, h1, h3, h4, ul{
+	margin: 0;
+}
+
+.header {
+	max-width: 1440px;
+	padding: 0 120px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+}
+@media (max-width: 1024px) {
+	.header {
+		width: 100%;
+		box-sizing: border-box;
+		padding-right: 32px;
+		padding-left: 32px;
+		padding-bottom: 0;
+		justify-content: space-between;
+	}	
+}
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	img:first-child {
+		margin-right: 20px;
+		height: 48px;
+	}
+}
+@media (max-width: 768px) {
+	.logo {
+		img:first-child {
+			padding-top: 12px;
+		}
+	}
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	padding: 20px 0;
+	font-weight: 600;
+	text-align: center;
+	&__item {
+		margin-right: 56px;
+		text-transform: uppercase;
+		cursor: pointer;
+		&:nth-child(5){
+			margin-right: 0;
+			&::after{
+				content: url(../img/arrow-right.png);
+				margin-left: 15px;
+			}
+		}
+		a {
+			line-height: 24px;
+			font-size: 14px;
+			text-decoration: none;
+			&:visited {
+				color: $text-dark;
+			}
+		}
+	}
+	&__login {
+		margin-top: -10px;
+		display: inline-block;
+		border: 1.6px solid $text-dark;
+		box-sizing: border-box;
+		border-radius: 5px;
+		padding: 8px 20px;
+	}
+}
+@media (max-width: 1024px) {
+	.menu {
+		&__item {
+			margin-right: 46px;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.menu {
+		display: none;
+	}
+}
+
+
+.menu-hidden {
+	display: none;
+	padding-left: 22px;
+	h4 {
+		color: $text-light;
+	}
+	.logo {
+		padding: 22px;
+		padding-top: 10px;
+	}
+	button {
+		padding: 16px 68px;
+		font-weight: 600;
+		line-height: 24px;
+		text-transform: uppercase;
+		display: block;
+		width: 80%;
+		margin: 60px auto;
+		border: none;
+		background: linear-gradient(251.94deg, #C4E58B -41.78%, #86BE26 63.15%);
+		box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+		border-radius: 5px;
+		color: $text-light;
+	}
+}
+@media (max-width: 768px) {
+	.menu-hidden {
+		.logo {
+			padding-bottom: 50px;
+		}
+	}
+	.menu-hidden_show { 
+		position: fixed;
+		display: block;
+		width: 100%;
+		height: 100vh;
+		background-color: #292F42;
+		z-index: 50;
+		right: 0;
+		top: 0;
+		ul {
+			text-align: center;
+			margin-top: 20%;
+		}
+		li {
+			margin-bottom: 64px;
+			a {
+				font-size: 24px;
+				line-height: 24px;
+				color: #fff;
+				&:visited {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 500px) {
+	.menu-hidden_show { 
+		ul {
+			padding-left: 40px;
+			margin-top: 25px;
+			text-align: left;
+			margin-top: 0;
+		}
+		li {
+			margin-bottom: 32px;
+		}
+	}
+}
+
+
+.open-button {
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+@media (max-width: 768px) {
+	.open-button {
+		display: block;
+	}
+}
+
+.close-button {
+	position: absolute;
+	top: 30px;
+	right: 35px;
+	img {
+		height: 22px;
+		width: 22px;
+	}
+}
+@media (max-width: 768px) {
+	.close-button {
+		display: block;
+	}
+}
+
+.show-btn { 
+	display: block;
+}
+
