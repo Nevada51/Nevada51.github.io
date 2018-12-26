@@ -1,3 +1,4 @@
+
 .footer {
 	width: 100%;
 	background-image: url(../img/footer-bg.svg);
@@ -5,30 +6,31 @@
 	background-position: top center;
 	background-size: cover;
 	overflow: hidden;
-	.footer__wraper {
-		max-width: 1100px;
-		margin: 220px auto 200px;
-		padding: 0 20px;
-		box-sizing: border-box;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		align-items: center;
-	}
 }
+.footer__wraper {
+	max-width: 1100px;
+	margin: 220px auto 200px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
 @media (max-width: 1024px){
 	.footer {
 		padding: 0 32px;
 		box-sizing: border-box;
 		background-color: linear-gradient(to top, #292F42 65%, transparent 0%);
 		background-position: top left;
-		.footer__wraper  {
-			margin: 25px auto;
-			padding-top: 20%;
-			display: flex;
-			flex-direction: column;
-		}
+	}
+	.footer__wraper  {
+		margin: 25px auto;
+		padding-top: 20%;
+		display: flex;
+		flex-direction: column;
 	}
 }
 @media (max-width: 620px){
@@ -36,11 +38,11 @@
 		background-position: top left ;
 		background-size: cover;
 		padding: 0 16px;
-		.footer__wraper {
-			max-height: none;
-			margin-top: 130px;
-		}
-	}	
+	}
+	.footer__wraper {
+		max-height: none;
+		margin-top: 130px;
+	}
 }
 @media (max-width: 540px){
 	.footer {
@@ -50,7 +52,6 @@
 		}
 	}	
 }
-
 
 
 .footer-left {
@@ -86,10 +87,9 @@
 		font-size: 24px;
 		margin-bottom: 26px;
 	}
-	.footer-button_form {
+	&_form {
 		position: relative;
 		width: 380px;
-
 		input {
 			background: #FDFDFD;
 			border: 1px solid rgba(41, 47, 66, 0.1);
@@ -124,7 +124,7 @@
 }
 @media (max-width: 768px){
 	.footer-button {
-		.footer-button_form {
+		&_form {
 			width: 260px;
 			input {
 				box-sizing: border-box;
@@ -138,7 +138,7 @@
 @media (max-width: 620px){
 	.footer-button {
 		margin-top: 30px;
-		.footer-button_form {
+		&_form {
 			width: 100%;
 			input {
 				box-sizing: border-box;
@@ -151,7 +151,7 @@
 }
 
 .footer-logo {
-	.footer-logo__img {
+	&__img {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -181,7 +181,7 @@
 }
 @media (max-width: 620px){
 	.footer-logo {
-		.footer-logo__img {
+		&__img {
 			justify-content: center;
 		}
 		p {
@@ -200,7 +200,7 @@
 	width: 60%;
 	padding-top: 20%;
 	max-height: 270px;
-	.footer-items__item {
+	&__item {
 		position: relative;
 		color: #FFFFFF;
 		h4 {
@@ -208,17 +208,8 @@
 			font-weight: bold;
 			line-height: 24px;
 			font-size: 20px;
-
 			margin-bottom: 23px;
 		}
-		.footer-items__buttons {
-			display: none;
-			img {
-				height: 20px;
-				width: 20px;
-			}	
-		}
-	
 		ul {
 			list-style-type: none;
 			padding: 0;
@@ -238,6 +229,14 @@
 			}
 		}
 	}
+	&__buttons {
+		display: none;
+		img {
+			height: 20px;
+			width: 20px;
+		}	
+
+	}
 }
 @media (max-width: 1024px){
 	.footer-items {
@@ -245,7 +244,7 @@
 		padding: 44px 0 0;
 		padding-bottom: 0;
 		justify-content: flex-start;
-		.footer-items__item {
+		&__item {
 			min-width: 220px;
 		}
 	}	
@@ -253,7 +252,7 @@
 @media (max-width: 620px){
 	.footer-items {
 		max-height: none;
-		.footer-items__item {
+		&__item {
 			min-width: 180px;
 		    margin-bottom: 24px;
 		}
@@ -262,28 +261,27 @@
 @media (max-width: 540px){
 	.footer-items {
 		flex-direction: column;
-		.footer-items__item {
+		&__item {
 			width: 100%;
 			height: auto;
-			.footer-items__buttons {
+		}
+		&__buttons {
+			display: block;
+			img {
+				position: absolute;
+				top: 4px;
+				right: 0;
+			}
+			&_plus {
 				display: block;
-				img {
-					position: absolute;
-					top: 4px;
-					right: 0;
-				}
+			}
+			&_minus{
+				display: block;
 			}
 		}
-		.footer-items__item_hidden {
+		&__item_hidden {
 			overflow: hidden;
 			height: 24px;
-		}
-		.footer-items_plus {
-			display: block;
-
-		}
-		.footer-items_minus{
-			display: block;
 		}
 		.footer-hidde-btn {
 			display: none;
@@ -294,7 +292,6 @@ hr {
 	width: 100%;
 	margin: 0;
 	border: 1px solid #202535;
-
 }
 .copyright {
 	width: 100%;

@@ -20,31 +20,31 @@ window.onload = function () {
 		}
 	});
 
-	var foter_list_items = document.getElementsByClassName("footer-items__buttons");  //список дивов скнопкаи
+	var foter_list_items = document.getElementsByClassName("footer-items__buttons");  //список div з кнопкаи
 
 	for (var i = 0; i < foter_list_items.length; i++) {
 
-		var foter_btn_open = foter_list_items[i].childNodes[1];   //вибираєм всі кнопки з плюсом
-		var foter_btn_close = foter_list_items[i].childNodes[3];  //вибираєм всі кнопки з мінусом
+		var foter_btn_open = foter_list_items[i].firstElementChild;   //вибираєм всі кнопки з плюсом
+		var foter_btn_close = foter_list_items[i].lastElementChild;  //вибираєм всі кнопки з мінусом
 
-		foter_btn_open.onclick = function(event) {   // вішаєм на кнопку обробник подій на кнопку відкрити
+		foter_btn_open.onclick = function(event) {   // вішаєм на кнопку "відкрити" обробник подій
 
 			var target = event.target;     //вказуєм контекст  (Делегирование событий)
 			var parrent = target.parentElement.parentElement;  //вибираєм потрібний батьківський елмент конкретної кнопки
 	
-			parrent.classList.remove('footer-items__item_hidden');  //забираєм клас для приховування списку
+			parrent.classList.remove('footer-items__item_hidden');  //показуєм прихований списку
 			target.classList.add('footer-hidde-btn');               //приховуєм кнопку відкрити
-			var show = target.nextSibling.nextSibling.classList.remove('footer-hidde-btn');    //показуєм кнопку закрити
+			target.nextElementSibling.classList.remove('footer-hidde-btn');    //показуєм кнопку закрити
 		}
 
-		foter_btn_close.onclick = function(event) {     // вішаєм на кнопку обробник подій на кнопку закрити
+		foter_btn_close.onclick = function(event) {     // вішаєм на кнопку закрити обробник подій 
 
-			var target = event.target;
+			var target = event.target;                   //вказуєм контекст  (Делегирование событий)
 			var parrent = target.parentElement.parentElement;  //вибираєм потрібний батьківський елмент конкретної кнопки
 
-			parrent.classList.add('footer-items__item_hidden');  //забираєм клас для приховування списку
+			parrent.classList.add('footer-items__item_hidden');  //приховуєм список
 			target.classList.add('footer-hidde-btn');			 //приховуєм кнопку закрити
-			var show = target.previousSibling.previousSibling.classList.remove('footer-hidde-btn');  //показуєм кнопку відкрити
+			target.previousElementSibling.classList.remove('footer-hidde-btn');  //показуєм кнопку відкрити
 		}
 	}
 
