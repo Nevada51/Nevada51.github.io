@@ -1,0 +1,72 @@
+.clients
+	color: #363636
+	display: flex
+	flex-direction: row
+	padding: 6rem 0 3rem
+	font-family: 'Roboto', sans-serif;
+
+@media (max-width: 480px)
+	.clients
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+.client-reviews
+	width: 37%
+	text-align: left
+	padding-left: 2rem
+	h2
+		font-size: 5rem
+		margin-bottom: 4.5rem
+		font-weight: 900
+	p
+		font-size: 1.8rem
+		line-height: 3.3rem
+		margin-bottom: 4.5rem
+	button
+		text-transform: uppercase
+		color: #fff
+		font-weight: bold
+		letter-spacing: 1.5px
+		padding: 2.5rem 4.2rem
+		background-color: #1c7fff
+		border: none
+		cursor: pointer
+
+@media (max-width: 480px)
+	.client-reviews
+		width: 100%
+		text-align: center
+		padding-left: 0
+		padding-bottom: 2rem
+		
+
+.client-logos
+	width: 63%
+	padding-left: 5rem
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+
+@media (max-width: 480px)
+	.client-logos
+		width: 100%
+		padding-left: 0
+		align-items: center
+		justify-content: center
+		img
+			max-width: 80px
+
+.client-logos__item
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 33.333%
+	height: 125px
+	img
+		max-width: 120px	
+
+@media (max-width: 480px)
+	.client-logos__item
+		width: 33.333%
+
