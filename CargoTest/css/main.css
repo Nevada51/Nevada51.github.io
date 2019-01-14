@@ -4,12 +4,6 @@
   font-weight: normal;
   font-style: normal; }
 
-@font-face {
-  font-family: 'MyriadPro-Regular';
-  src: url("../fonts/MyriadPro-Regular.otf");
-  font-weight: normal;
-  font-style: normal; }
-
 .slider {
   width: 100%;
   margin: 0 auto;
@@ -234,7 +228,8 @@
       width: 90%; }
     .slide-description h3 {
       text-align: center;
-      white-space: nowrap; } }
+      white-space: nowrap;
+      margin-top: 2rem; } }
 
 .slide__active {
   width: 50%; }
